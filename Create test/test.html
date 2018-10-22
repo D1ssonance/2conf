@@ -1,0 +1,13 @@
+<script src="./js/vue.js" ></script>
+<div id="app">
+    <label>Nazvanie testa</label><input type="text" v-model="name" ><br>
+    <label>Opisanie testa</label><textarea v-model="description"></textarea><br>
+    <label>Vopros {{ count }}</label><input type="text" v-model="q">
+    <button @click="addQuestion()">Dobavit vopros</button>
+
+
+    <create-test ref="con"></create-test>
+    <button @click="saveCurrentTest()">Save test</button>
+</div>
+
+<script src="./js/create-test.js"></script>
